@@ -1,0 +1,104 @@
+<template>
+    <div class="login">
+    <template if:true={isDoctorLogin} >
+        <div class="login-section">
+            <div class="card-content-center">
+                <h6>Doctor Login</h6>
+            <br>
+                <div class="filed">
+                    <label for="username">Username:</label>
+                    <input type="email" id="doctoremail" name="email" required>
+                </div>
+                <div class="filed">
+                    <label for="password">Password:</label>
+                    <input type="password" id="doctorpassword" name="password" required>
+                    <input type="checkbox" onchange={togglePassword}> Show Password
+                </div>
+                <br>
+                <button type="login" onclick={handledoctorLogin}>Login</button>
+            <br>
+                <div class="login-footer">
+                    <a href="/ForgotPassword">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template if:true={isPatientLogin} >
+        <div class="login-section">
+            <div class="card-content-center">
+                <h6>Patient Login</h6>
+            <br>
+                <div class="filed">
+                    <label for="username">Username:</label>
+                    <input type="email" id="patientemail" name="email" required>
+                </div>
+                <div class="filed">
+                    <label for="password">Password:</label>
+                    <input type="password" id="patientpassword" name="password" required>
+                    <input type="checkbox" onchange={togglePassword}><span>Show Password</span>
+                </div>
+                <br>
+                <button type="login" onclick={handlepatientLogin}>Login</button>
+            <br>
+                    <div class="login-footer">
+                        <a href="">Forgot Password?</a>
+                        <a onclick={isRegistered} >New Registration?</a>
+                    </div>
+            </div>
+        </div>
+    </template>
+
+
+    <template if:true={isRegister} >
+
+        <div class="registration-section">
+            <div class="card-content-center">
+                <h6>Patient Registration</h6>
+
+                <div class="filed" >
+                    <label for="text">First Name :</label>
+                    <lightning-input type="text" class="fname" name="First Name" label="First Name" required></lightning-input>
+                </div>
+                <div class="filed" >
+                    <label for="text">Last Name :</label>
+                    <lightning-input type="text" class="lname" name="Last Name" label="Last Name" required></lightning-input>
+                </div>
+                <div class="filed" >
+                    <label for="text">Phone :</label>
+                    <lightning-input type="text" class="mobile" name="Mobile" label="Mobile" required></lightning-input>
+                </div>
+                <div class="filed" >
+                    <label for="Email">Email :</label>
+                    <lightning-input type="email" class="email" name="name" label="Email" required></lightning-input>
+                </div>
+                
+                <div class="filed" >
+                    <label >Blood Group :</label>
+                    <lightning-combobox
+                        name="Blood Group"
+                        label="Blood Group"
+                        value={value}
+                        placeholder="Select Blood Group"
+                        options={options}
+                        onchange={handleBloodGroupChange} >
+                    </lightning-combobox>
+                </div>
+                <div class="filed" >
+                    <label for="date">DOB :</label>
+                    <lightning-input type="date" name="dob" class="dob" label="Enter Date Of Birth" ></lightning-input>
+                </div>
+                
+                <br><br>
+                
+                <lightning-button variant="brand" label="Register" onclick={handleRegisterSubmit}></lightning-button>
+                
+                <div class="login-footer">
+                    <a onclick={isPatientLogin} >Patient Login</a>
+                </div>
+            </div>
+            
+        </div>
+</template>
+</div>
+</template>

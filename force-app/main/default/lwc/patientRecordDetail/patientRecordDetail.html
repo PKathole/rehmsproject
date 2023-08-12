@@ -1,0 +1,38 @@
+<template>
+    <lightning-card>
+        <template if:true={conId}>
+            <template if:false={isEditing}>
+                <div class="slds-p-horizontal_small slds-float_right">
+                    <lightning-button label="Edit" onclick={handleEditClick}></lightning-button>
+                </div>
+                <lightning-record-form
+                    object-api-name={objectApiName}
+                    record-id={conId}
+                    layout-type="Full"
+                    mode="view"
+                    columns="2"
+                >
+                </lightning-record-form>
+            </template>
+            <template if:true={isEditing}>
+                <div class="slds-p-horizontal_small slds-float_right">
+                    <lightning-button label="Cancel" onclick={handleCancelClick}></lightning-button>
+                </div>
+                <lightning-record-edit-form
+                    object-api-name={objectApiName}
+                    record-id={conId}
+                    onsuccess={handleSubmitSuccess}
+                >
+                    <lightning-messages></lightning-messages>
+                    <lightning-input-field field-name="First_Name__c"></lightning-input-field>
+                    <lightning-input-field field-name="Last_Name__c"></lightning-input-field>
+                    <lightning-input-field field-name="Email__c"></lightning-input-field>
+                    <lightning-input-field field-name="Phone__c"></lightning-input-field>
+                    <div class="slds-m-top_medium">
+                        <lightning-button variant="brand" type="submit" label="Save"></lightning-button>
+                    </div>
+                </lightning-record-edit-form>
+            </template>
+        </template>
+    </lightning-card>
+</template>

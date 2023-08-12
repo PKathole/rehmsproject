@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+  }
+  .title {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .host{
+    font-family: "Times New Roman", Times, serif;
+  }
+  .column {
+    flex: 1;
+  }
+.booked {
+  font-size: 18px;
+  color: green;
+ }

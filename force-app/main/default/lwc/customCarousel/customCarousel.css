@@ -1,0 +1,42 @@
+.container{
+    width: auto;
+    margin: auto;
+    height: auto;
+    align-content: center;
+}
+.prev,.next{
+    position:absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+
+}
+.prev:hover, .next:hover{
+    background: rgba(0,0,0,0.7);
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #bbb;
+    margin: 0 2px;
+    display: inline-block;
+}
+.active, .dot:hover{
+    background: #717171;;
+}
+.card {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+}

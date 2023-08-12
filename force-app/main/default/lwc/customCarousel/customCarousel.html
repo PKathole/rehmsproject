@@ -1,0 +1,18 @@
+<template>
+    <div class="card">
+        <div class="slds-is-relative container">
+            <template for:each={slidesData} for:item="slide">
+                <div class={slide.cardclasses} key={slide.slideIndex}>
+                    <img src={slide.image}  class="image"/>
+                </div>
+            </template>
+            <a class="prev" onclick={backsilde}>&#10094;</a>
+            <a class="next" onclick={nextsilde}>&#10095;</a>
+        </div>
+        <div class="slds-text-align_center slds-var-p-around_medium">
+            <template for:each={slidesData} for:item="slide">
+                <span class={slide.dotclasses} data-id={slide.slideindex} key={slideindex} onclick={currentSlide}></span>
+            </template>
+        </div>
+    </div>
+</template>

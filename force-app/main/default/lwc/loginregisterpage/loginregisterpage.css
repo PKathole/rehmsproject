@@ -1,0 +1,96 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.login-section{
+    justify-content: space-between;
+    flex-basis: 35%;
+    padding: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+label {
+    color: white;
+    display: block;
+    font-size: 1rem;
+    font-weight: semi bold;
+    margin-bottom: 5px;
+    padding-left: 3px;
+  }
+  input {
+    width: 240px;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  button {
+    background-color: rgb(50, 168, 170);
+    color:black;
+    font-size: 1.0rem;
+    font-weight: medium;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    align-items: center;
+  }
+  
+  button:hover {
+    background-color: white;
+    border:#777;
+  }
+
+  .filed{
+    width: 100%;
+    padding-left: 35px ;
+    padding-right: 35px;
+  }
+
+  h6{
+    color: white;
+    font-weight: semi bold;
+    padding-top: 10px;
+ }
+    
+
+  .card-content-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 23, 53);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .login-footer{
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-footer a{
+    color: white;
+    font-weight: 400;
+    justify-content: space-between;
+    padding: 15px;
+    padding-bottom: 10px;
+  }
+  .filed span {
+    color: white;
+    padding-left: 0 ;
+    padding-right: 0;
+  }
+  
+  .checkbox{
+    color: white;
+    padding-left: 0 ;
+    padding-right: 0;
+  }
